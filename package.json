@@ -2,7 +2,7 @@
   "name": "jan-ghijsens-i-talent-portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://JanGhijsensPXL.github.io/jan-ghijsens-i-talent-portfolio/",
+  "homepage": "https://github.com/JanGhijsensPXL/jan-ghijsens-i-talent-portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",

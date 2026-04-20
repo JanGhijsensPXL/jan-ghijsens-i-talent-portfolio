@@ -8,27 +8,87 @@ type TerminalLine = {
 }
 
 const WELCOME_TEXT =
-  'Booting jan-ghijsens-portfolio...\nType "help" to list available commands.'
+  'Booting jan-ghijsens-portfolio...\nType "help" to list available commands. Try "portfolio" for a full overview.'
 
 const COMMAND_RESPONSES: Record<string, string[]> = {
   whoami: [
-    'Jan Ghijsens',
-    'Student Toegepaste Informatica at PXL with a strong interest in modern web and backend development.',
+    'Jan Ghijsens - Student Toegepaste Informatica at PXL.',
+    'Interests: software, games, systems thinking, and practical problem solving.',
+    'Strong collaboration style with a pragmatic, solution-driven mindset.',
   ],
-  skills: ['React', 'TypeScript', '.NET Core'],
+  skills: [
+    'Core technologies: React, TypeScript, .NET Core',
+    'Also practiced: Node.js, API testing (Postman), data concepts, DDD patterns.',
+  ],
   education: [
     'PXL Hogeschool',
     'Bachelor Toegepaste Informatica',
-    'Focus: software engineering, problem solving, and practical project work.',
+    'Focus: software engineering, team projects, and practical implementation.',
   ],
   experience: [
     'International internship at FrostBit Software Lab, Rovaniemi, Finland.',
-    'Hands-on collaboration in an international software environment.',
+    'Project: Towards a Paperless Reindeer Husbandry application.',
+    'Frontend development in React + TypeScript with a .NET Core backend context.',
   ],
   activities: [
-    'DDD innovatieroute',
-    'Hack The Future hackathon',
-    'International internship in Finland',
+    'Selected activities:',
+    '- Innovatieroute Domain Driven Design (Oct 2025)',
+    '- Hack The Future hackathon - Aquatopia challenge (Nov 2025)',
+    '- International internship in Finland (Feb-May 2026)',
+    'Use: ddd | hackathon | internship | reflection for details.',
+  ],
+  portfolio: [
+    'Portfolio structure loaded:',
+    '1) Voorstelling',
+    '2) Overzicht activiteiten (seminaries, innovatie, POP, internationalisering)',
+    '3) Selectie: DDD route, Hack The Future, internationale stage',
+    '4) Eindreflectie',
+    'Use: seminaries | ddd | hackathon | internship | reflection | xfactor',
+  ],
+  seminaries: [
+    'Seminaries followed (selection):',
+    '- Rendering 3D in Web',
+    '- CQRS with MediatR',
+    '- Code Katas',
+    '- AI Wizards',
+    '- The Challenge of Open Source',
+    '- BDD & ATDD',
+    '- Postman AI',
+    '- Datawarehousing in Microsoft Fabric',
+    '- De wereld van (Enterprise) UX',
+    '- Cegeka Open Source',
+  ],
+  ddd: [
+    'Innovatieroute: Domain Driven Design (3 sessions, Oct 2025).',
+    'Topics: Event Storming, Domain Events, Aggregates, Value Objects.',
+    'Architecture concepts: Onion, Hexagonal, bounded communication.',
+    'Main learning: better domain analysis before coding saves time later.',
+  ],
+  hackathon: [
+    'Hack The Future - Challenge 111: "Duiken in een nieuwe dimensie".',
+    'Location: Flanders Meeting & Convention Center, Antwerp Zoo.',
+    'Built: prototype web app around an aquatopia/fish monitoring concept.',
+    'Reflection: technically solid result, but creativity can be pushed further.',
+  ],
+  internship: [
+    'International internship at FrostBit Software Lab (Lapland UAS).',
+    'Period: 23 Feb 2026 - 29 May 2026 (about 532h).',
+    'Work: frontend features, reporting, data visualisation, reliability of user input.',
+    'Bachelor thesis context: compare validation strategies to reduce input errors.',
+  ],
+  reflection: [
+    'End reflection highlights:',
+    '- Significant personal growth after earlier study setbacks.',
+    '- Better balance between quick implementation and prior analysis.',
+    '- Stronger confidence from working independently in an international setting.',
+    '- Career direction: software developer, building practical solutions with impact.',
+  ],
+  xfactor: [
+    'PXL X-factor alignment (self-reflection):',
+    '- International collaboration: strong (Finland internship).',
+    '- Disciplinary + multidisciplinary: strong (development + research blend).',
+    '- Entrepreneurial/innovative: visible in extra activities and challenges.',
+    '- Passion/empathy: present in project motivation and team contribution.',
   ],
   help: [
     'Available commands:',
@@ -37,6 +97,13 @@ const COMMAND_RESPONSES: Record<string, string[]> = {
     'education',
     'experience',
     'activities',
+    'portfolio',
+    'seminaries',
+    'ddd',
+    'hackathon',
+    'internship',
+    'reflection',
+    'xfactor',
     'github',
     'help',
     'clear',
@@ -206,8 +273,9 @@ function App() {
         <h1>Jan Ghijsens</h1>
         <p>Student Toegepaste Informatica at PXL</p>
         <p>International internship at FrostBit Software Lab, Rovaniemi Finland</p>
+        <p>Focus: software engineering, collaboration, and practical impact</p>
         <p>GitHub: github.com/JanGhijsensPXL</p>
-        <p className="muted">Use terminal commands to explore.</p>
+        <p className="muted">Start with: portfolio, activities, or reflection.</p>
       </aside>
     </main>
   )
